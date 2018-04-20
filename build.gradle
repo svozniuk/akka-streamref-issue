@@ -1,0 +1,25 @@
+group 'com.test'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.12'
+    compile 'com.typesafe.akka:akka-stream_2.11:2.5.12'
+    compile 'com.typesafe.akka:akka-slf4j_2.11:2.5.12'
+    compile 'com.typesafe.akka:akka-cluster_2.11:2.5.12'
+
+    runtime 'ch.qos.logback:logback-classic:1.2.3'
+    runtime 'ch.qos.logback:logback-access:1.2.3'
+    compile 'com.typesafe:config:1.3.2'
+    compile 'org.slf4j:slf4j-api:1.7.5'
+}
+
+mainClassName = "com.test.Main"
